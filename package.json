@@ -1,6 +1,6 @@
 {
   "name": "minimum-cut",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Utility to compute minimum cut of a given graph",
   "main": "dist/min-cut.js",
   "bin": "bin/min-cut.js",
