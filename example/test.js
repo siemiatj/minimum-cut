@@ -1,4 +1,4 @@
-let findMinCut = require('../src/min-cut.es6');
+let findMinCut = require('../dist/min-cut');
 
 let verticesArray = [ '1', '2', '3', '4', '5', '6', '7', '8' ]
 let edgesArray = [ 
