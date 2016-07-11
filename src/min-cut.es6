@@ -1,13 +1,6 @@
 const Rn = require('random-number');
 
 let MIN_CUT = null;
-
-const findMinimumCut = function(vertices, edges) {
-  findMinCut(vertices, edges);
-
-  return MIN_CUT;
-}
-
 const findMinCut = function(vertices, edges) {
   if (vertices.length === 2) {
     MIN_CUT = edges.length;
@@ -60,4 +53,8 @@ const findMinCut = function(vertices, edges) {
   findMinCut(vertices, edges);
 };
 
-export default findMinimumCut;
+export default function findMinimumCut(vertices, edges) {
+  findMinCut(vertices, edges);
+
+  return MIN_CUT;
+};
