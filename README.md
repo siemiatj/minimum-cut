@@ -24,7 +24,8 @@ As a result you will receive the amount of edges left after contracting vertices
 Check the `example` folder or use this code as a starting point :
 
 ```
-let findMinCut = require('minimum-cut');
+import findMinimumCut from 'minimum-cut';
+// or var findMinimumCut = require('minimum-cut').default;
 
 let verticesArray = [ '1', '2', '3', '4', '5', '6', '7', '8' ]
 let edgesArray = [ 
@@ -46,4 +47,13 @@ let edgesArray = [
 
 let minCutInGraph = findMinCut(verticesArray, edgesArray);
 
+```
+
+
+## Building
+
+To build the project from source run:
+
+```bash
+npm install && gulp
 ```
