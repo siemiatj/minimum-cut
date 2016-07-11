@@ -1,7 +1,6 @@
-let findMinCut = require('../dist/min-cut');
-
-let verticesArray = [ '1', '2', '3', '4', '5', '6', '7', '8' ]
-let edgesArray = [ 
+var findMinCut = require('../dist/min-cut').default;
+var verticesArray = [ '1', '2', '3', '4', '5', '6', '7', '8' ]
+var edgesArray = [ 
   [ '1', '2' ],
   [ '1', '3' ],
   [ '1', '4' ],
@@ -18,6 +17,6 @@ let edgesArray = [
   [ '7', '8' ]
 ];
 
-let minCutInGraph = findMinCut(verticesArray, edgesArray);
+var minCutInGraph = findMinCut(verticesArray, edgesArray);
 
 console.log('Minimum cut equals : ', minCutInGraph);

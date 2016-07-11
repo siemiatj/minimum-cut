@@ -60,4 +60,4 @@ const findMinCut = function(vertices, edges) {
   findMinCut(vertices, edges);
 };
 
-module.exports = findMinimumCut;
+export default findMinimumCut;
