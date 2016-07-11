@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*eslint no-console: ["error", { allow: ["log"] }] */
-/* global process, __dirname */
+/* global process */
 
 const fs = require('fs');
 const readline = require('readline');
@@ -8,14 +8,17 @@ const path = require('path');
 const Clone = require('clone');
 const findMinimumCut = require('../dist/min-cut').default;
 const PATHARG = process.argv[2];
-const RETRIES = parseInt(process.argv[3], 10);
+const RETRIES = parseInt(process.argv[3], 10) || 10;
 
 if (!PATHARG) {
   console.log('usage: minimum-cut [file_path] [retries]');
   process.exit(1);
 }
+if (!process.argv[3]) {
+  console.log('Number of retries not defined. Using 10.');
+}
 
-const filePath = path.resolve(__dirname, PATHARG);
+const filePath = path.resolve(PATHARG);
 const lineReader = readline.createInterface({
   input: fs.createReadStream(filePath)
 });
