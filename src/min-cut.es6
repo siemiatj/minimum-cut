@@ -20,7 +20,7 @@ const findMinCut = function(vertices, edges) {
 
     edges.splice(m, 1);
     vertices = vertices.filter(v => {
-      return v != n2;
+      return v !== n2;
     });
 
     return [n1, n2];
@@ -31,10 +31,10 @@ const findMinCut = function(vertices, edges) {
     let n2 = edge[1];
 
     edges.forEach(e => {
-      if (e[0] == n2) {
+      if (e[0] === n2) {
         e[0] = n1;
       }
-      if (e[1] == n2) {
+      if (e[1] === n2) {
         e[1] = n1;
       }
     });
@@ -42,7 +42,7 @@ const findMinCut = function(vertices, edges) {
 
   const removeLoops = function() {
     edges = edges.filter(e => {
-      return (e[0] != e[1]);
+      return (e[0] !== e[1]);
     });
   };
 
@@ -57,4 +57,4 @@ export default function findMinimumCut(vertices, edges) {
   findMinCut(vertices, edges);
 
   return MIN_CUT;
-};
+}
