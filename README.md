@@ -57,3 +57,12 @@ To build the project from source run:
 ```bash
 npm install && gulp
 ```
+
+
+## Testing
+
+To test the project run:
+
+```bash
+gulp test
+```
