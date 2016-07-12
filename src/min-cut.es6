@@ -2,12 +2,16 @@ const Rn = require('random-number');
 
 let MIN_CUT = null;
 const findMinCut = function(vertices, edges) {
+  // base case, 2 edges left
   if (vertices.length === 2) {
     MIN_CUT = edges.length;
     return;
   }
 
-  // remove edge and vertex at one end of this edge
+  /*
+   * Select random edge and remove it from edges array.
+   * Remove vertex at one end of the selected edge.
+   */
   const removeEdge = function() {
     let m = Rn({
       min: 0,
@@ -26,6 +30,11 @@ const findMinCut = function(vertices, edges) {
     return [n1, n2];
   };
 
+  /*
+   * 'Contract' edge. Since one vertex was removed,
+   * set all edges pointing to this deleted vertex to
+   * point to the remaining vertex.
+   */
   const contract = function(edge) {
     let n1 = edge[0];
     let n2 = edge[1];
@@ -40,6 +49,9 @@ const findMinCut = function(vertices, edges) {
     });
   };
 
+  /*
+   * Remove loops - edges starting and ending in the same vertex
+   */
   const removeLoops = function() {
     edges = edges.filter(e => {
       return (e[0] !== e[1]);
