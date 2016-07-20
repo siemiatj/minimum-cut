@@ -1,3 +1,7 @@
+[![Dependencies](https://david-dm.org/siemiatj/minimum-cut.svg)](https://david-dm.org/siemiatj/minimum-cut)
+[![devDependencies](https://david-dm.org/siemiatj/minimum-cut/dev-status.svg)](https://david-dm.org/siemiatj/minimum-cut#info=devDependencies&view=table)
+[![NPM version](https://badge.fury.io/js/minimum-cut.svg)](https://badge.fury.io/js/minimum-cut.svg)
+
 ## What
 
 Given an array of vertices and an array of edges of a connected graph this package computes the minimum cut using [Karger's algorithm](https://en.wikipedia.org/wiki/Karger%27s_algorithm). It was battle tested with 100k+ edges sample array from Coursera Algorithms course.
